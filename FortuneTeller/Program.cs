@@ -55,7 +55,7 @@ namespace FortuneTeller
 
             if (userSiblings == 0)
             {
-                location = "Miami";
+                location = "Italy";
             }
             else if (userSiblings == 1)
             {
@@ -63,7 +63,7 @@ namespace FortuneTeller
             }
             else if (userSiblings == 2)
             {
-                location = "Italy";
+                location = "Miami";
             }
             else if (userSiblings == 3)
             {
@@ -78,7 +78,36 @@ namespace FortuneTeller
                 location = "The corner booth at Applebee's";
             }
 
+            //ROYGBIV variables
 
+            string transportation;
+            switch (lowerRoygbiv)
+            {
+                case "red":
+                    transportation = "Mustang";
+                    break;
+                case "orange":
+                    transportation = "Jeep";
+                    break;
+                case "yellow":
+                    transportation = "GMC truck";
+                    break;
+                case "green":
+                    transportation = "yacht";
+                    break;
+                case "blue":
+                    transportation = "jet plane";
+                    break;
+                case "indigo";
+                    transportation = "scooter";
+                    break;
+                case "Violet";
+                    transportation = "Motorcycle";
+                    break;
+                default
+                    transportation = "Roller Skates";
+            }
+            
         }
     }
 }
