@@ -10,51 +10,67 @@ namespace FortuneTeller
     {
         static void Main(string[] args)
         {
+            //Quit Command
             while (true)
             {
+                Console.WriteLine("Welcome to Zoltar! Beware your fortune!");
+
                 //Gather users information
-                Console.WriteLine("Please enter your first name.");
+
+                Console.WriteLine("Enter your first name.");
                 string firstName = Console.ReadLine();
-                if (firstName == "quit" || firstName == "Quit" || firstName == "QUIT")
+                string quit = firstName.ToLower();
+                if (quit == "quit")
                     break;
-
-                Console.WriteLine("Please enter your last name.");
+              
+                Console.WriteLine("Now enter your last name.");
                 string lastName = Console.ReadLine();
-                if (lastName == "quit" || lastName == "Quit" || lastName == "QUIT")
+                quit = lastName.ToLower();
+                if (quit == "quit")
                     break;
 
-                Console.WriteLine("Please enter your age");
+                Console.WriteLine("How old are you?");
                 string userAgeString = Console.ReadLine();
-                if (userAgeString == "quit" || userAgeString == "Quit" || userAgeString == "QUIT")
+                userAgeString = userAgeString.ToLower();
+                if (userAgeString == "quit")
                     break;
+
                 int userAge = int.Parse(userAgeString);
 
-                Console.WriteLine("Please enter the month you were born 1-12.");
+                Console.WriteLine("In which month were you born 1-12.");
                 string userBirthString = Console.ReadLine();
-                if (userBirthString == "quit" || userBirthString == "Quit" || userBirthString == "QUIT")
+                userBirthString = userBirthString.ToLower();
+                if (userBirthString == "quit")
                     break;
+
                 int userBirth = int.Parse(userBirthString);
 
 
-                Console.WriteLine("Please enter the number of siblings you have.");
+                Console.WriteLine("How many brothers and/or sister do you have?");
                 string userSiblingsString = Console.ReadLine();
-                if (userSiblingsString == "quit" || userSiblingsString == "Quit" || userSiblingsString == "QUIT")
+                userSiblingsString = userSiblingsString.ToLower();
+                if (userSiblingsString == "quit")
                     break;
+
                 int userSiblings = int.Parse(userSiblingsString);
 
-                Console.WriteLine("Please enter your favorite ROYGBIV color, if you do not know ROYGBIV please type \"Help\".");
+                Console.WriteLine("Enter your favorite ROYGBIV color, if you do not know ROYGBIV please type \"Help\".");
                 string roygbiv = Console.ReadLine();
+                string lowerRoygbiv = roygbiv.ToLower();
 
-                 if (roygbiv == "quit" || roygbiv == "Quit" || roygbiv == "QUIT")
+                if (roygbiv == "quit")
                     break;
 
-                string lowerRoygbiv = roygbiv.ToLower();
+                
                 //Check if help is needed
 
                 if (lowerRoygbiv == "help")
                 {
-                    Console.WriteLine("ROYGBIV is Red, Orange, Yellow, Green, Blue, Indigo, Violet. Please choose one.");
+                    Console.WriteLine("ROYGBIV is Red, Orange, Yellow, Green, Blue, Indigo, Violet. Choose one.");
                     roygbiv = Console.ReadLine();
+                    lowerRoygbiv = roygbiv.ToLower();
+                    if (roygbiv == "quit")
+                        break;
                 }
 
                 lowerRoygbiv = roygbiv.ToLower();
@@ -62,6 +78,7 @@ namespace FortuneTeller
                 //Check users age vs even or odd
 
                 string retireAge;
+
                 if (userAge % 2 == 0)
                 {
                     retireAge = "20 years";
@@ -107,7 +124,7 @@ namespace FortuneTeller
                         transportation = "Mustang";
                         break;
                     case "orange":
-                        transportation = "Jeep";
+                        transportation = "jeep";
                         break;
                     case "yellow":
                         transportation = "GMC truck";
@@ -122,10 +139,10 @@ namespace FortuneTeller
                         transportation = "scooter";
                         break;
                     case "Violet":
-                        transportation = "Motorcycle";
+                        transportation = "motorcycle";
                         break;
                     default:
-                        transportation = "Roller Skates";
+                        transportation = "roller skates";
                         break;
                 }
 
@@ -150,7 +167,7 @@ namespace FortuneTeller
                 }
 
                 //Give user their fortune
-
+                Console.WriteLine(" And now the mighty Zoltar will give you your fortune!");
                 Console.WriteLine("{0} {1} will retire in {2} with {3} in the bank, a vacation home in {4} and a {5}.", firstName, lastName, retireAge, bank, location, transportation);
                 break;
             }
