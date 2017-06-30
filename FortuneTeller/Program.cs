@@ -39,6 +39,44 @@ namespace FortuneTeller
             
             lowerRoygbiv = roygbiv.ToLower();
 
+            //Check users age vs even or odd
+
+            int retireAge;
+            if (userAge % 2 == 0)
+            {
+                retireAge = 20;
+            }
+            else
+            {
+                retireAge = 5;
+            }
+            //Create location
+            string location;
+
+            if (userSiblings == 0)
+            {
+                location = "Miami";
+            }
+            else if (userSiblings == 1)
+            {
+                location = "LA";
+            }
+            else if (userSiblings == 2)
+            {
+                location = "Italy";
+            }
+            else if (userSiblings == 3)
+            {
+                location = "Cleveland";
+            }
+            else if (userSiblings > 3)
+            {
+                location = "Pittsburg";
+            }
+            else
+            {
+                location = "The corner booth at Applebee's";
+            }
 
 
         }
