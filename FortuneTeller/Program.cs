@@ -98,16 +98,38 @@ namespace FortuneTeller
                 case "blue":
                     transportation = "jet plane";
                     break;
-                case "indigo";
+                case "indigo":
                     transportation = "scooter";
                     break;
-                case "Violet";
+                case "Violet":
                     transportation = "Motorcycle";
                     break;
-                default
+                default:
                     transportation = "Roller Skates";
+                    break;
             }
-            
+
+            //Create $$$
+
+            int bank;
+            if (userBirth >= 1 && userBirth <= 4)
+            {
+                bank = 500000;
+            }
+            else if (userBirth >= 5 && userBirth <= 8)
+            {
+                bank = 20000;
+            }
+            else if (userBirth >= 9 && userBirth <= 12)
+            {
+                bank = 5000;
+            }
+            else
+            {
+                bank = 0;
+            }
+
+
         }
     }
 }
