@@ -171,6 +171,7 @@ namespace FortuneTeller
                 Console.WriteLine("{0} {1} will retire in {2} with {3} in the bank, a vacation home in {4} and a {5}.", firstName, lastName, retireAge, bank, location, transportation);
                 break;
             }
+            Console.WriteLine("Nobody likes a quitter!");
            
         }
     }
