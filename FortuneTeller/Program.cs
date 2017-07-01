@@ -22,7 +22,7 @@ namespace FortuneTeller
                 string quit = firstName.ToLower();
                 if (quit == "quit")
                     break;
-              
+
                 Console.WriteLine("Now enter your last name.");
                 string lastName = Console.ReadLine();
                 quit = lastName.ToLower();
@@ -61,7 +61,7 @@ namespace FortuneTeller
                 if (roygbiv == "quit")
                     break;
 
-                
+
                 //Check if help is needed
 
                 if (lowerRoygbiv == "help")
@@ -171,8 +171,9 @@ namespace FortuneTeller
                 Console.WriteLine("{0} {1} will retire in {2} with {3} in the bank, a vacation home in {4} and a {5}.", firstName, lastName, retireAge, bank, location, transportation);
                 break;
             }
-            Console.WriteLine("Nobody likes a quitter!");
-           
+            
+                    // Could not get the quitter message without it running at the end of the program regardless.
+
         }
     }
 }
